@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* THIS WHERE YOU LEFT, CUSTOMIZE FONTS, COLORS */
+  :root {
+    /* MOBILE FIRST */
+    --fs-heading-1: 80px;
+    --fs-heading-2: 56px;
+    --fs-heading-3: 24px;
+    --fs-heading-4: 16px;
+    --fs-heading-5: 16px;
+    --fs-subheading-1: 28px;
+    --fs-subheading-2: 14px;
+    --fs-body: 15px;
+    --fs-navtext: 16px;
+
+    --clr-primary: #0b0d17; 
+    --clr-secondary: #d0d6f9; 
+    --clr-accent: #ffffff; 
+
+    --ls-heading-5: 2.7px;
+    --ls-subheading-2: 2.35px;
+    --ls-navtext: 2.7px;
+  }
+
+  @media all and (min-width: 768px) {
+    :root {
+      /* TABLET */
+      --fs-heading-1: 150px;
+      --fs-heading-2: 80px;
+      --fs-heading-3: 40px;
+      --fs-heading-4: 24px;
+      --fs-heading-5: 20px;
+      --fs-body: 16px;
+      --fs-navtext: 14px;
+      --ls-heading-5: 3.375px;
+      --ls-navtext: 2.35px;
+    }
+  }
+
+  
+  @media all and (min-width: 1280px) {
+    :root {
+      /* DESKTOP */
+      --fs-heading-1: 150px;
+      --fs-heading-2: 100px;
+      --fs-heading-3: 56px;
+      --fs-heading-4: 32px;
+      --fs-heading-5: 28px;
+      --fs-subheading-1: 28px;
+      --fs-subheading-2: 14px;
+      --fs-body: 18px;
+      --fs-navtext: 16px;
+      --ls-heading-5: 4.725px;
+    }
+  }
+
+  .heading-1 {
+    font-family: 'Bellefair', serif;
+    font-size: var(--fs-heading-1);
+    color: var(--clr-accent);
+  }
+  .heading-2 {
+    font-family: 'Bellefair', serif;
+    font-size: var(--fs-heading-2);
+    color: var(--clr-accent);
+  }
+  .heading-3 {
+    font-family: 'Bellefair', serif;
+    font-size: var(--fs-heading-3);
+    color: var(--clr-accent);
+  }
+  .heading-4 {
+    font-family: 'Bellefair', serif;
+    font-size: var(--fs-heading-4);
+    color: var(--clr-accent);
+  }
+  .heading-5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: var(--fs-heading-5);
+    letter-spacing: var(--ls-heading-5);
+    color: var(--clr-secondary);
+  }
+  .sub-heading-1 {
+    font-family: 'Bellefair', serif;
+    font-size: var(--fs-subheading-1);
+    color: var(--clr-accent);
+  }
+  .sub-heading-2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: var(--fs-subheading-2);
+    letter-spacing: var(--ls-subheading-2);
+    color: var(--clr-accent);
+  }
+  .body {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: var(--fs-body);
+    color: var(--clr-secondary);
+  }
+  .nav-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: var(--fs-navtext);
+    letter-spacing: var(--ls-navtext);
+    color: var(--clr-accent);
+  }
+}
