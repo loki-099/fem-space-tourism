@@ -61,6 +61,7 @@
     font-family: 'Bellefair', serif;
     font-size: var(--fs-heading-1);
     color: var(--clr-accent);
+    line-height: 100px;
   }
   .heading-2 {
     font-family: 'Bellefair', serif;
@@ -95,9 +96,10 @@
     color: var(--clr-accent);
   }
   .body {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: var(--fs-body);
     color: var(--clr-secondary);
+    line-height: 25px;
   }
   .nav-text {
     font-family: 'Barlow Condensed', sans-serif;
@@ -105,4 +107,74 @@
     letter-spacing: var(--ls-navtext);
     color: var(--clr-accent);
   }
-}
+  .btn-text {
+    font-family: 'Bellefair', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+    color: var(--clr-primary);
+  }
+
+  @media all and (min-width: 768px) {
+    .heading-1 {
+      line-height: 150px;
+    }
+    .heading-2 {
+      line-height: 150px;
+    }
+    .heading-2 {
+      line-height: 150px;
+    }
+    .heading-3 {
+      line-height: 150px;
+    }
+    .heading-4 {
+      line-height: 150px;
+    }
+    .sub-heading-1 {
+      line-height: 150px;
+    }
+    .sub-heading-2 {
+      line-height: 150px;
+    }
+    .body {
+      line-height: 28px;
+    }
+    .nav-text {
+      line-height: 96px;
+    }
+    .btn-text {
+      font-size: 32px;
+      letter-spacing: 2px;
+    }
+  }
+
+  @media all and (min-width: 1440px) {
+    .heading-1 {
+      line-height: 150px;
+    }
+    .heading-2 {
+      line-height: 150px;
+    }
+    .heading-2 {
+      line-height: 150px;
+    }
+    .heading-3 {
+      line-height: 150px;
+    }
+    .heading-4 {
+      line-height: 150px;
+    }
+    .sub-heading-1 {
+      line-height: 150px;
+    }
+    .sub-heading-2 {
+      line-height: 150px;
+    }
+    .body {
+      line-height: 32px;
+    }
+    .nav-text {
+      line-height: 150px;
+    }
+  }
+} 
