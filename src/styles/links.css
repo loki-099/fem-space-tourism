@@ -1,0 +1,7 @@
+.slider a.active {
+  border-right: 4px solid white;
+}
+
+.header a.active {
+  border-bottom: 2px solid white;
+}
