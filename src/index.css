@@ -140,7 +140,7 @@
       line-height: 28px;
     }
     .nav-text {
-      line-height: 96px;
+      line-height: 94px;
     }
     .btn-text {
       font-size: 32px;
@@ -168,12 +168,6 @@
       line-height: 150px;
     }
     .sub-heading-2 {
-      line-height: 150px;
-    }
-    .body {
-      line-height: 32px;
-    }
-    .nav-text {
       line-height: 150px;
     }
   }
