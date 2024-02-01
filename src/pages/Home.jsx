@@ -11,7 +11,7 @@ function Home() {
       <div>
         <Header setIsOpen={setIsOpen}/>
         <Slider isOpen={isOpen} setIsOpen={setIsOpen}/>
-        <div className='mt-12 md:mt-28 px-6 mx-auto flex flex-col items-center gap-20 md:gap-40 xl:flex-row xl:justify-between xl:items-end xl:w-[1180px]'>
+        <div className='my-12 md:my-28 xl:mt-32 px-6 mx-auto flex flex-col items-center gap-20 md:gap-40 xl:flex-row xl:justify-between xl:items-end xl:px-[136px]'>
           <div className='w-full max-w-[450px] flex flex-col items-center gap-4 md:gap-6 xl:items-start'>
             <h5 className='heading-5 uppercase'>So, You want to travel to</h5>
             <h1 className='heading-1 uppercase'>Space</h1>
