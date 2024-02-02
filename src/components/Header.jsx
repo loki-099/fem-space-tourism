@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 
 const Header = ( { setIsOpen } ) => {
   return (
-    <div className='absolute w-full top-0 z-20 px-6 md:px-0 md:pl-9 xl:mt-6'>
+    <div className='w-full top-0 px-6 md:px-0 md:pl-9 xl:mt-6'>
       <header className='flex items-center justify-between pt-6 md:pt-0 xl:justify-normal'>
         <a href="./" className='mr-6'><img src="./assets/shared/logo.svg" alt="logo"/></a>
         <div className='hidden xl:block bg-white z-10 h-[1px] w-[100%] flex-1 translate-x-7'></div>

@@ -17,8 +17,8 @@ function App() {
   return (
     <BrowserRouter>
       <Context.Provider value={[isOpen, setIsOpen]}>
-        <div className="relative overflow-x-hidden">
-          <Header setIsOpen={setIsOpen}/>
+        <div className="relative">
+          {/* <Header setIsOpen={setIsOpen}/> */}
           <Slider isOpen={isOpen} setIsOpen={setIsOpen}/>
           <Routes>
             <Route path="/" element={<Home/>}/>

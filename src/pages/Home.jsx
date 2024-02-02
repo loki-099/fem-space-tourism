@@ -8,11 +8,10 @@ function Home() {
   const [isOpen, setIsOpen] = useContext(Context)
 
   return (
-    <div className='w-full overflow-y-auto bg-home-mobile bg-center bg-no-repeat bg-cover md:bg-home-tablet xl:bg-home-desktop'>
+    <div className='w-full h-screen overflow-y-auto bg-home-mobile bg-center bg-no-repeat bg-cover md:bg-home-tablet xl:bg-home-desktop'>
       <div>
-        {/* <Header setIsOpen={setIsOpen}/> */}
-        {/* <Slider isOpen={isOpen} setIsOpen={setIsOpen}/> */}
-        <div className='my-32 md:my-52 xl:my-64 px-6 mx-auto flex flex-col items-center gap-20 md:gap-40 xl:flex-row xl:justify-between xl:items-end xl:px-[136px]'>
+        <Header setIsOpen={setIsOpen}/>
+        <div className='my-14 md:my-28 xl:my-12 xl:mt-36 px-6 mx-auto flex flex-col items-center gap-20 md:gap-40 xl:flex-row xl:justify-between xl:items-end xl:px-[136px]'>
           <div className='w-full max-w-[450px] flex flex-col items-center gap-4 md:gap-6 xl:items-start'>
             <h5 className='heading-5 uppercase'>So, You want to travel to</h5>
             <h1 className='heading-1 uppercase'>Space</h1>

@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 const Slider = ( { isOpen, setIsOpen } ) => {
 
   return (
-    <div className={`md:hidden w-[68%] h-screen absolute bg-white/[4%] ${isOpen ? 'right-0' : '-right-full'} top-0 backdrop-blur-[40px] ease-out duration-500 z-30`}>
+    <div className={`md:hidden w-[68%] h-screen fixed bg-white/[4%] ${isOpen ? 'right-0' : '-right-full'} top-0 backdrop-blur-[40px] ease-out duration-500 z-30`}>
       <button className='absolute right-6 top-9' onClick={() => {setIsOpen((prev) => !prev)}}><img src="./assets/shared/icon-close.svg" alt="" /></button>
       <nav className='slider mt-28 pl-8'>
         <ul className='flex flex-col gap-6'>
