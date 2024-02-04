@@ -1,7 +1,10 @@
-import React from 'react'
-import { NavLink, Link } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom';
+import { Context } from '../App'
 
-const Header = ( { setIsOpen } ) => {
+const Header = () => {
+  const [isOpen, setIsOpen] = useContext(Context)
+
   return (
     <div className='w-full top-0 px-6 md:px-0 md:pl-9 xl:mt-6'>
       <header className='flex items-center justify-between pt-6 md:pt-0 xl:justify-normal'>
