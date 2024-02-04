@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Virtual } from 'swiper/modules';
 import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import '../styles/links.css'
 
 //! NOTES
 //* I set a useState for swiperRef to access methods and properties of the Swiper
@@ -12,6 +13,7 @@ import 'swiper/css/navigation';
 const ExpSwiper = () => {
 
   const [swiperRef, setSwiperRef] = useState(null)
+  const slide = useRef()
 
   const handleClick = (index) => {
     swiperRef.slideTo(index, 500)
@@ -27,8 +29,9 @@ const ExpSwiper = () => {
         slidesPerView={1}
         className=' w-fit h-[90%]'
         onSwiper={setSwiperRef}
+        ref={slide}
         >
-          <SwiperSlide virtualIndex={0}>
+          <SwiperSlide>
             {({ isActive }) => (
               <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
                 <img src="/assets/destination/image-mars.webp" alt=""/>
@@ -36,21 +39,25 @@ const ExpSwiper = () => {
             )}
           </SwiperSlide>
           <SwiperSlide>
-            <div className='flex items-center justify-center'>
-              <img src="/assets/destination/image-moon.webp" alt="" />
-            </div>
+            {({ isActive }) => (
+              <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
+                <img src="/assets/destination/image-moon.webp" alt=""/>
+              </div>
+            )}
           </SwiperSlide>
           <SwiperSlide>
-            <div className='flex items-center justify-center'>
-              <img src="/assets/destination/image-titan.webp" alt="" />
-            </div>
+            {({ isActive }) => (
+              <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
+                <img src="/assets/destination/image-titan.webp" alt=""/>
+              </div>
+            )}
           </SwiperSlide>
         </Swiper>
       </div>
       <div className='bg-green-400 px-9'>
-        <button className='p-2 bg-slate-400 mx-2' onClick={() => handleClick(0)}>1</button>
-        <button className='p-2 bg-slate-400 mx-2' onClick={() => handleClick(1)}>2</button>
-        <button className='p-2 bg-slate-400 mx-2' onClick={() => handleClick(2)}>3</button>
+        <button className='p-2 mx-2 bg-white' onClick={(e) => handleClick(0)}>1</button>
+        <button className='p-2 mx-2' onClick={(e) => handleClick(1)}>2</button>
+        <button className='p-2 mx-2' onClick={(e) => handleClick(2)}>3</button>
       </div>
     </div>
   )
