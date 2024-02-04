@@ -2,6 +2,26 @@
   border-right: 4px solid white;
 }
 
-.header a.active {
+/* .header a.active {
   border-bottom: 2px solid white;
+} */
+
+.header::after {
+  content: "";
+  background-color: white;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 300ms ease-in-out;
 }
+
+.header.active::after {
+  width: 100%;
+}
+
+.header:hover::after {
+  width: 100%;
+}
+
