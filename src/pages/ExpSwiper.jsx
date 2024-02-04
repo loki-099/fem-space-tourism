@@ -22,39 +22,39 @@ const ExpSwiper = () => {
 
   return (
     <div className='h-screen w-screen flex flex-col items-center justify-center'>
-      <div className='w-[500px] h-[500px] flex items-center'>
+      <div className='w-full max-w-[400px] mx-auto flex items-center'>
         <Swiper
         modules={[Virtual]}
         spaceBetween={50}
         slidesPerView={1}
-        className=' w-fit h-[90%]'
+        className=''
         onSwiper={setSwiperRef}
         ref={slide}
         >
           <SwiperSlide>
             {({ isActive }) => (
               <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
-                <img src="/assets/destination/image-mars.webp" alt=""/>
+                <img src="/assets/destination/image-mars.webp" alt="" className='w-[170px]'/>
               </div>
             )}
           </SwiperSlide>
           <SwiperSlide>
             {({ isActive }) => (
               <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
-                <img src="/assets/destination/image-moon.webp" alt=""/>
+                <img src="/assets/destination/image-moon.webp" alt="" className='w-[170px]'/>
               </div>
             )}
           </SwiperSlide>
           <SwiperSlide>
             {({ isActive }) => (
               <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
-                <img src="/assets/destination/image-titan.webp" alt=""/>
+                <img src="/assets/destination/image-titan.webp" alt="" className='w-[170px]'/>
               </div>
             )}
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className='bg-green-400 px-9'>
+      <div className='bg-green-400 px-9 mt-5'>
         <button className='p-2 mx-2 bg-white' onClick={(e) => handleClick(0)}>1</button>
         <button className='p-2 mx-2' onClick={(e) => handleClick(1)}>2</button>
         <button className='p-2 mx-2' onClick={(e) => handleClick(2)}>3</button>
