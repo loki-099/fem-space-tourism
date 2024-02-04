@@ -4,9 +4,6 @@
 
 /* .header a.active {
   border-bottom: 2px solid white;
-<<<<<<< HEAD
-}
-=======
 } */
 
 .header::after {
@@ -28,4 +25,3 @@
   width: 100%;
 }
 
->>>>>>> main
