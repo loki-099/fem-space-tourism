@@ -50,7 +50,6 @@
       --fs-heading-4: 32px;
       --fs-heading-5: 28px;
       --fs-subheading-1: 28px;
-      --fs-subheading-2: 14px;
       --fs-body: 18px;
       --fs-navtext: 16px;
       --ls-heading-5: 4.725px;
@@ -116,19 +115,10 @@
     .heading-1 {
       line-height: 150px;
     }
-    .heading-2 {
-      line-height: 150px;
-    }
-    .heading-2 {
-      line-height: 150px;
-    }
     .heading-3 {
       line-height: 150px;
     }
     .heading-4 {
-      line-height: 150px;
-    }
-    .sub-heading-1 {
       line-height: 150px;
     }
     .body {
@@ -147,19 +137,10 @@
     .heading-1 {
       line-height: 150px;
     }
-    .heading-2 {
-      line-height: 150px;
-    }
-    .heading-2 {
-      line-height: 150px;
-    }
     .heading-3 {
       line-height: 150px;
     }
     .heading-4 {
-      line-height: 150px;
-    }
-    .sub-heading-1 {
       line-height: 150px;
     }
   }

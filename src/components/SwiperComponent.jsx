@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Virtual } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -11,7 +11,7 @@ const SwiperComponent = ({ slide, setDestinations }) => {
   const [swiperRef, setSwiperRef] = useState(null)
 
   return (
-    <div className='w-full max-w-[400px] mx-auto flex items-center'>
+    <div className='w-full max-w-[400px] md:max-w-[500px] mx-auto flex items-center'>
       <Swiper
       modules={[Virtual]}
       spaceBetween={50}
@@ -19,8 +19,7 @@ const SwiperComponent = ({ slide, setDestinations }) => {
       className=''
       onSwiper={setSwiperRef}
       onSlideChange={() => {
-        let activeIndex = swiperRef.activeIndex
-        setDestinations(dest[activeIndex])
+        setDestinations(dest[swiperRef.activeIndex])
       }}
       ref={slide}
       >
@@ -30,9 +29,9 @@ const SwiperComponent = ({ slide, setDestinations }) => {
               {({ isActive }) => (
                 <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
                   <img 
-                    src={`/assets/destination/image-${d}.webp`} 
+                    src={`./assets/destination/image-${d}.webp`} 
                     alt={d}
-                    className='w-[170px]'
+                    className='w-[170px] md:w-[300px] xl:w-[445px]'
                   />
                 </div>
               )}
