@@ -30,7 +30,7 @@ const Destination = () => {
       <Header/>
       <div className='px-6 md:px-9 xl:px-[136px] xl:pb-14 my-6 md:my-10 flex flex-col items-center md:items-baseline'>
         <h5 className='heading-5 uppercase text-accent'><span className='font-bold opacity-25 mr-3'>01</span>Pick your destination</h5>
-        <div className='mt-8 md:mt-16 xl:flex xl:items-start xl:gap-32'>
+        <div className='w-full mt-8 md:mt-16 xl:flex xl:items-start xl:gap-32'>
           <div>
             {/* SWIPER */}
             <SwiperComponent slide={swiperRef} setDestinations={setDestinations}/>
