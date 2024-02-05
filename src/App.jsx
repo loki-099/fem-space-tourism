@@ -14,7 +14,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false)
 
   useLayoutEffect(() => {
-    setIsOpen((prev) => !prev)
+    setIsOpen(false)
   }, [location.pathname])
 
   return (

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 
 function Home() {
@@ -11,9 +12,9 @@ function Home() {
             <h1 className='heading-1 uppercase'>Space</h1>
             <p className='body text-center xl:text-left'>Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!</p>
           </div>
-          <div className='w-[150px] h-[150px] bg-white rounded-full flex items-center justify-center md:w-[242px] md:h-[242px]'>
+          <Link to='destination' className='w-[150px] h-[150px] bg-white rounded-full flex items-center justify-center md:w-[242px] md:h-[242px]'>
             <p className='btn-text uppercase pt-2'>Explore</p>
-          </div>
+          </Link>
         </div>  
       </div>
     </div>
