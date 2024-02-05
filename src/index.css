@@ -82,7 +82,6 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: var(--fs-heading-5);
     letter-spacing: var(--ls-heading-5);
-    color: var(--clr-secondary);
   }
   .sub-heading-1 {
     font-family: 'Bellefair', serif;
@@ -93,7 +92,6 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: var(--fs-subheading-2);
     letter-spacing: var(--ls-subheading-2);
-    color: var(--clr-accent);
   }
   .body {
     font-family: 'Barlow', sans-serif;
@@ -133,9 +131,6 @@
     .sub-heading-1 {
       line-height: 150px;
     }
-    .sub-heading-2 {
-      line-height: 150px;
-    }
     .body {
       line-height: 28px;
     }
@@ -165,9 +160,6 @@
       line-height: 150px;
     }
     .sub-heading-1 {
-      line-height: 150px;
-    }
-    .sub-heading-2 {
       line-height: 150px;
     }
   }

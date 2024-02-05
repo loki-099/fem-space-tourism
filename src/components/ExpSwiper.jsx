@@ -1,18 +1,18 @@
 import React, { useRef, useState } from 'react'
 import { Virtual } from 'swiper/modules';
-import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/links.css'
-import { useLocation } from 'react-router';
 
 //! NOTES
 //* I set a useState for swiperRef to access methods and properties of the Swiper
 //* When button is clicked, handleClick is called to fire slideTo(index) method and slide to indexed slide.
 //* .activeIndex shows the active index showing on the Slider, which will be useful later for rendering information.
 
-const ExpSwiper = ({ setDestinations }) => {
+const ExpSwiper = ({ destinations, setDestinations }) => {
 
+  const dest = ['moon', 'mars', 'europa', 'titan']
   const [swiperRef, setSwiperRef] = useState(null)
   const slide = useRef()
 
@@ -20,16 +20,21 @@ const ExpSwiper = ({ setDestinations }) => {
     switch (index){
       case 0:
         swiperRef.slideTo(index, 500)
-        setDestinations("mars")
+        setDestinations("moon")
         break
       case 1:
         swiperRef.slideTo(index, 500)
-        setDestinations("moon")
+        setDestinations("mars")
         break
       case 2:
         swiperRef.slideTo(index, 500)
+        setDestinations("europa")
+        break
+      case 3:
+        swiperRef.slideTo(index, 500)
         setDestinations("titan")
         break
+        
     }
   }
 
@@ -48,33 +53,34 @@ const ExpSwiper = ({ setDestinations }) => {
         }}
         ref={slide}
         >
-          <SwiperSlide>
-            {({ isActive }) => (
-              <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
-                <img src="/assets/destination/image-mars.webp" alt="" className='w-[170px]'/>
-              </div>
-            )}
-          </SwiperSlide>
-          <SwiperSlide>
-            {({ isActive }) => (
-              <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
-                <img src="/assets/destination/image-moon.webp" alt="" className='w-[170px]'/>
-              </div>
-            )}
-          </SwiperSlide>
-          <SwiperSlide>
-            {({ isActive }) => (
-              <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
-                <img src="/assets/destination/image-titan.webp" alt="" className='w-[170px]'/>
-              </div>
-            )}
-          </SwiperSlide>
+          {dest.map((d, index) => {
+            return (
+              <SwiperSlide key={index}>
+                {({ isActive }) => (
+                  <div className={`flex items-center justify-center transition-opacity duration-300 ${isActive? 'opacity-100': 'opacity-0'}`}>
+                    <img 
+                      src={`/assets/destination/image-${d}.webp`} 
+                      alt={d}
+                      className='w-[200px]'
+                    />
+                  </div>
+                )}
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
       </div>
-      <div className='bg-green-400 px-9 mt-5'>
-        <button className='p-2 mx-2 uppercase' id='mars' onClick={(e) => handleClick(0)}>mars</button>
-        <button className='p-2 mx-2 uppercase' id='moon' onClick={(e) => handleClick(1)}>moon</button>
-        <button className='p-2 mx-2 uppercase' id='titan' onClick={(e) => handleClick(2)}>titan</button>
+      <div className='px-9 mt-5'>
+        {dest.map((d, index) => (
+          <button 
+            key={index} 
+            className={`py-1 px-3 mx-2 heading-5 uppercase border-2 rounded-xl transition-[border] ${destinations == d ? 'border-white' : 'border-transparent'}`} 
+            id={`d`} 
+            onClick={() => handleClick(index)}
+          >
+            {d}
+          </button>
+        ))}
       </div>
     </div>
   )

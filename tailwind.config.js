@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary' : '#0b0d17',
+        'secondary': '#d0d6f9',
+        'accent': '#ffffff'
+      },
       backgroundImage: {
         'home-mobile': "url('/assets/home/background-home-mobile.jpg')",
         'home-tablet': "url('/assets/home/background-home-tablet.jpg')",
