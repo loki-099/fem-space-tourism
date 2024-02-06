@@ -25,3 +25,7 @@
   width: 100%;
 }
 
+.swiper-wrapper {
+  align-items: flex-end;
+}
+

@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import { Virtual } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import '../styles/links.css'
 
-const SwiperComponent = ({ slide, setDestinations }) => {
+const DestinationSwiper = ({ slide, setDestinations }) => {
 
   const dest = ['moon', 'mars', 'europa', 'titan']
   const [swiperRef, setSwiperRef] = useState(null)
@@ -13,10 +11,8 @@ const SwiperComponent = ({ slide, setDestinations }) => {
   return (
     <div className='w-full max-w-[400px] md:max-w-[500px] mx-auto flex items-center'>
       <Swiper
-      modules={[Virtual]}
       spaceBetween={50}
       slidesPerView={1}
-      className=''
       onSwiper={setSwiperRef}
       onSlideChange={() => {
         setDestinations(dest[swiperRef.activeIndex])
@@ -43,4 +39,4 @@ const SwiperComponent = ({ slide, setDestinations }) => {
   )
 }
 
-export default SwiperComponent
+export default DestinationSwiper

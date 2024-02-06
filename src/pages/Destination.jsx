@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Header from '../components/Header';
 import information from '../information.json'
-import SwiperComponent from '../components/SwiperComponent';
+import DestinationSwiper from '../components/DestinationSwiper';
 
 const Destination = () => {
   const [destinations, setDestinations] = useState("moon")
@@ -33,7 +33,7 @@ const Destination = () => {
         <div className='w-full mt-8 md:mt-16 xl:flex xl:items-start xl:gap-32'>
           <div>
             {/* SWIPER */}
-            <SwiperComponent slide={swiperRef} setDestinations={setDestinations}/>
+            <DestinationSwiper slide={swiperRef} setDestinations={setDestinations}/>
           </div>
           <div className='mt-7 xl:mt-0 md:mt-14 xl:flex xl:flex-col'>
             {/* BUTTONS, TITLE, INFO */}
