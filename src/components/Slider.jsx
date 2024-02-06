@@ -10,7 +10,7 @@ const Slider = ( { isOpen, setIsOpen } ) => {
         <ul className='flex flex-col gap-6'>
           <NavLink to='/' className='slider nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>00</span>Home</li></NavLink>
           <NavLink to="/destination" className='slider nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>01</span>Destination</li></NavLink>
-          <a href="" className='nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>02</span>Crew</li></a>
+          <NavLink to='/crew' className='nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>02</span>Crew</li></NavLink>
           <a href="" className='nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>03</span>Technology</li></a>
         </ul>
       </nav>

@@ -6,6 +6,7 @@ import './styles/links.css'
 import Home from "./pages/Home";
 import Destination from "./pages/Destination";
 import Slider from "./components/Slider";
+import Crew from "./pages/Crew";
 
 export const Context = React.createContext()
 
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/destination" element={<Destination/>}/>
+          <Route path="/crew" element={<Crew/>}/>
         </Routes>
       </div>
     </Context.Provider>
