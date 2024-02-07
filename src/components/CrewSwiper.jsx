@@ -3,27 +3,28 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import '../styles/links.css'
 
-const CrewSwiper = () => {
+const CrewSwiper = ( { slide, crews, setCurCrew } ) => {
   const [swiperRef, setSwiperRef] = useState(null)
-  const crews = ['douglas-hurley', 'mark-shuttleworth', 'victor-glover', 'anousheh-ansari']
 
   return (
     <Swiper
       spaceBetween={50}
       slidesPerView={1}
       onSwiper={setSwiperRef}
-      className='bg-red-600'
+      onSlideChange={() => {
+        setCurCrew(crews[swiperRef.activeIndex])
+      }}
+      className='h-full border-b-2 border-[#383B4B]'
+      ref={slide}
     >
       {crews.map((name, index) => (
-        <SwiperSlide className='bg-red-300'>
+        <SwiperSlide className='flex justify-center'>
           {({ isActive }) => (
-            <div className={`flex items-center justify-center transition-opacity duration-300`}>
-              <img 
-                src={`./assets/crew/image-${name}.webp`} 
-                alt={name}
-                className='w-[100%] md:w-[300px] xl:w-[445px]'
-              />
-            </div>
+            <img 
+              src={`./assets/crew/image-${name}.webp`} 
+              alt={name}
+              className={`w-auto max-h-full transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`}
+            />
           )}
         </SwiperSlide>
       ))}
