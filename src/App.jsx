@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Destination from "./pages/Destination";
 import Slider from "./components/Slider";
 import Crew from "./pages/Crew";
+import Technology from "./pages/Technology";
 
 export const Context = React.createContext()
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/destination" element={<Destination/>}/>
           <Route path="/crew" element={<Crew/>}/>
+          <Route path="/technology" element={<Technology/>}/>
         </Routes>
       </div>
     </Context.Provider>

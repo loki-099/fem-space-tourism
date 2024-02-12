@@ -15,7 +15,7 @@ const Header = () => {
             <NavLink to='/' className='relative header nav-text uppercase'><li><span className='font-bold mr-3 hidden xl:inline'>00</span>Home</li></NavLink>
             <NavLink to='/destination' className='relative header nav-text uppercase'><li><span className='font-bold mr-3 hidden xl:inline'>01</span>Destination</li></NavLink>
             <NavLink to='/crew' className='relative header nav-text uppercase'><li><span className='font-bold mr-3 hidden xl:inline'>02</span>Crew</li></NavLink>
-            <a href="" className='relative header nav-text uppercase'><li><span className='font-bold mr-3 hidden xl:inline'>03</span>Technology</li></a>
+            <NavLink to='/technology' className='relative header nav-text uppercase'><li><span className='font-bold mr-3 hidden xl:inline'>03</span>Technology</li></NavLink>
           </ul>
         </nav>
         <button 

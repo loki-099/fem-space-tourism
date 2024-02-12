@@ -11,7 +11,7 @@ const Slider = ( { isOpen, setIsOpen } ) => {
           <NavLink to='/' className='slider nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>00</span>Home</li></NavLink>
           <NavLink to="/destination" className='slider nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>01</span>Destination</li></NavLink>
           <NavLink to='/crew' className='nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>02</span>Crew</li></NavLink>
-          <a href="" className='nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>03</span>Technology</li></a>
+          <NavLink to='/technology' className='nav-text uppercase'><li className='py-1'><span className='font-bold mr-3'>03</span>Technology</li></NavLink>
         </ul>
       </nav>
     </div>
