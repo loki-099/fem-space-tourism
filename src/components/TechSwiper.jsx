@@ -6,7 +6,7 @@ import '../styles/links.css'
 const TechSwiper = () => {
   return (
     <div>
-
+      
     </div>
   )
 }
