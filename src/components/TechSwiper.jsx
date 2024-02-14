@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCreative } from 'swiper/modules'
+import useGetWindowWidth from '../hooks/useGetWindowWidth'
 
 import 'swiper/css'
 import '../styles/links.css'
 import 'swiper/css/effect-creative'
 
-const TechSwiper = () => {
+const TechSwiper = ( { slide, technologies, setCurTech } ) => {
+  const {width} = useGetWindowWidth()
+  const [swiperRef, setSwiperRef] = useState(null)
+
   return (
     <Swiper
       modules={[EffectCreative]}
+      ref={slide}
+      onSwiper={setSwiperRef}
+      onSlideChange={() => {
+        setCurTech(technologies[swiperRef.activeIndex])
+      }}
       grabCursor={true}
       effect={'creative'}
       creativeEffect={{
@@ -21,11 +30,11 @@ const TechSwiper = () => {
           translate: ['100%', 0, 1],
         }
       }}
-      className='w-full h-[170px] absolute left-0'
+      className='w-full h-[170px] md:h-[310px] xl:h-full absolute left-0'
     >
-      <SwiperSlide className='bg-launch-vehicle-landscape bg-no-repeat bg-cover'></SwiperSlide>
-      <SwiperSlide className='bg-spaceport-landscape bg-no-repeat bg-cover'></SwiperSlide>
-      <SwiperSlide className='bg-space-capsule-landscape bg-no-repeat bg-cover'></SwiperSlide>
+      <SwiperSlide className={`bg-launch-vehicle-${width > 1280 ? 'portrait' : 'landscape'} bg-no-repeat bg-cover`}></SwiperSlide>
+      <SwiperSlide className={`bg-spaceport-${width > 1280 ? 'portrait' : 'landscape'} bg-no-repeat bg-cover`}></SwiperSlide>
+      <SwiperSlide className={`bg-space-capsule-${width > 1280 ? 'portrait' : 'landscape'} bg-no-repeat bg-cover`}></SwiperSlide>
     </Swiper>
   )
 }

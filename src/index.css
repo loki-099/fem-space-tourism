@@ -75,7 +75,6 @@
   .heading-4 {
     font-family: 'Bellefair', serif;
     font-size: var(--fs-heading-4);
-    color: var(--clr-accent);
   }
   .heading-5 {
     font-family: 'Barlow Condensed', sans-serif;

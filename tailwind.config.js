@@ -29,7 +29,7 @@ export default {
         'space-capsule-portrait': "url('assets/technology/image-space-capsule-portrait.jpg')",
         'space-capsule-landscape': "url('assets/technology/image-space-capsule-landscape.jpg')",
         'spaceport-portrait': "url('assets/technology/image-spaceport-portrait.jpg')",
-        'spaceport-landscape': "url('assets/technology/image-spaceport-landscape.jpg')",
+        'spaceport-landscape': "url('assets/technology/image-spaceport-landscape.jpg')"
       }
     }
   },
