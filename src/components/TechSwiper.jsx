@@ -40,12 +40,9 @@ const TechSwiper = ( { slide, technologies, setCurTech } ) => {
       }}
       className='w-full h-[170px] md:h-[310px] xl:h-full absolute left-0'
     >
-      {/* {technologies.map((technology, ind) => (
-        <SwiperSlide className={`bg-${technology}-${width > 1280 ? 'portrait' : 'landscape'} bg-no-repeat bg-cover`} key={ind}></SwiperSlide>
-      ))} */}
-      <SwiperSlide><img src={width > 1280 ? launchVehiclePortrait : launchVehicleLandscape} alt="" srcset="" /></SwiperSlide>
-      <SwiperSlide><img src={width > 1280 ? spaceportPortrait : spaceportLandscape} alt="" srcset="" /></SwiperSlide>
-      <SwiperSlide><img src={width > 1280 ? spaceCapsulePortrait : spaceCapsuleLandscape} alt="" srcset="" /></SwiperSlide>
+      <SwiperSlide><img src={width > 1280 ? launchVehiclePortrait : launchVehicleLandscape} alt="Launch Vehicle" /></SwiperSlide>
+      <SwiperSlide><img src={width > 1280 ? spaceportPortrait : spaceportLandscape} alt="Spaceport"/></SwiperSlide>
+      <SwiperSlide><img src={width > 1280 ? spaceCapsulePortrait : spaceCapsuleLandscape} alt="Space Capsule"/></SwiperSlide>
     </Swiper>
   )
 }
