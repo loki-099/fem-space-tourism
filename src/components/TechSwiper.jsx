@@ -7,6 +7,14 @@ import 'swiper/css'
 import '../styles/links.css'
 import 'swiper/css/effect-creative'
 
+// IMAGES
+import launchVehicleLandscape from '/assets/technology/image-launch-vehicle-landscape.jpg'
+import launchVehiclePortrait from '/assets/technology/image-launch-vehicle-portrait.jpg'
+import spaceportLandscape from '/assets/technology/image-spaceport-landscape.jpg'
+import spaceportPortrait from '/assets/technology/image-spaceport-portrait.jpg'
+import spaceCapsuleLandscape from '/assets/technology/image-space-capsule-landscape.jpg'
+import spaceCapsulePortrait from '/assets/technology/image-space-capsule-portrait.jpg'
+
 const TechSwiper = ( { slide, technologies, setCurTech } ) => {
   const {width} = useGetWindowWidth()
   const [swiperRef, setSwiperRef] = useState(null)
@@ -32,9 +40,12 @@ const TechSwiper = ( { slide, technologies, setCurTech } ) => {
       }}
       className='w-full h-[170px] md:h-[310px] xl:h-full absolute left-0'
     >
-      <SwiperSlide className={`bg-launch-vehicle-${width > 1280 ? 'portrait' : 'landscape'} bg-no-repeat bg-cover`}></SwiperSlide>
-      <SwiperSlide className={`bg-spaceport-${width > 1280 ? 'portrait' : 'landscape'} bg-no-repeat bg-cover`}></SwiperSlide>
-      <SwiperSlide className={`bg-space-capsule-${width > 1280 ? 'portrait' : 'landscape'} bg-no-repeat bg-cover`}></SwiperSlide>
+      {/* {technologies.map((technology, ind) => (
+        <SwiperSlide className={`bg-${technology}-${width > 1280 ? 'portrait' : 'landscape'} bg-no-repeat bg-cover`} key={ind}></SwiperSlide>
+      ))} */}
+      <SwiperSlide><img src={width > 1280 ? launchVehiclePortrait : launchVehicleLandscape} alt="" srcset="" /></SwiperSlide>
+      <SwiperSlide><img src={width > 1280 ? spaceportPortrait : spaceportLandscape} alt="" srcset="" /></SwiperSlide>
+      <SwiperSlide><img src={width > 1280 ? spaceCapsulePortrait : spaceCapsuleLandscape} alt="" srcset="" /></SwiperSlide>
     </Swiper>
   )
 }
