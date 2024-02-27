@@ -46,7 +46,7 @@ const Crew = () => {
               ))}
             </div>
             <div className='flex flex-col items-center xl:items-start'>
-              <h4 className='heading-4 uppercase opacity-50'>{cur.position}</h4>
+              <h4 className='heading-4 uppercase text-accent opacity-50'>{cur.position}</h4>
               <h3 className='heading-3 uppercase'>{cur.name}</h3>
               <p className='mt-4 body text-center pb-8 md:pb-0 md:w-[80%] xl:text-left xl:h-[112px]'>{cur.body}</p>
             </div>

@@ -16,6 +16,7 @@ const CrewSwiper = ( { slide, crews, setCurCrew } ) => {
       }}
       className='h-full border-b-2 border-[#383B4B]'
       ref={slide}
+      grabCursor={true}
     >
       {crews.map((name, index) => (
         <SwiperSlide className='flex justify-center'>

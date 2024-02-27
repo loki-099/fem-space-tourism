@@ -18,6 +18,7 @@ const DestinationSwiper = ({ slide, setDestinations }) => {
         setDestinations(dest[swiperRef.activeIndex])
       }}
       ref={slide}
+      grabCursor={true}
       >
         {dest.map((d, index) => {
           return (
