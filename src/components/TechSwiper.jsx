@@ -38,11 +38,11 @@ const TechSwiper = ( { slide, technologies, setCurTech } ) => {
           translate: ['100%', 0, 1],
         }
       }}
-      className='w-full h-[170px] md:h-[310px] xl:h-full absolute left-0'
+      className='w-full h-[170px] md:h-[310px] xl:h-full absolute left-0 xl:-right-32 xl:left-auto'
     >
-      <SwiperSlide><img src={width > 1280 ? launchVehiclePortrait : launchVehicleLandscape} alt="Launch Vehicle" className='w-full'/></SwiperSlide>
-      <SwiperSlide><img src={width > 1280 ? spaceportPortrait : spaceportLandscape} alt="Spaceport" className='w-full'/></SwiperSlide>
-      <SwiperSlide><img src={width > 1280 ? spaceCapsulePortrait : spaceCapsuleLandscape} alt="Space Capsule" className='w-full'/></SwiperSlide>
+      <SwiperSlide><img src={width > 1280 ? launchVehiclePortrait : launchVehicleLandscape} alt="Launch Vehicle" className='w-full h-full'/></SwiperSlide>
+      <SwiperSlide><img src={width > 1280 ? spaceportPortrait : spaceportLandscape} alt="Spaceport" className='w-full h-full'/></SwiperSlide>
+      <SwiperSlide><img src={width > 1280 ? spaceCapsulePortrait : spaceCapsuleLandscape} alt="Space Capsule" className='w-full h-full'/></SwiperSlide>
     </Swiper>
   )
 }
