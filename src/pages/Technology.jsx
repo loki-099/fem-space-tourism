@@ -35,7 +35,7 @@ const Technology = () => {
             <div className='flex gap-4 xl:flex-col'>
               {/* BUTTONS */}
               {technologies.map((technology, ind) => (
-                <button className={`heading-4 rounded-full w-10 h-10 md:w-[60px] md:h-[60px] border-[1px] ${curTech == technology ? 'bg-white border-white text-primary' : 'bg-transparent border-white/25 text-white'}`} key={ind} onClick={() => {
+                <button className={`heading-4 rounded-full w-10 h-10 md:w-[60px] md:h-[60px] border-[1px] hover:border-white ${curTech == technology ? 'bg-white border-white text-primary' : 'bg-transparent border-white/25 text-white'}`} key={ind} onClick={() => {
                   swiperRef.current.swiper.slideTo(ind, 500)
                 }}>{ind + 1}</button>
               ))}

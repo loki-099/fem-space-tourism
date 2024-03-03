@@ -39,7 +39,7 @@ const Crew = () => {
             <div className='flex justify-center gap-4 '>
               {crews.map((crew, index) => (
                 <button 
-                  className={`w-[10px] h-[10px] rounded-full ${crew === curCrew ? 'bg-white' : 'bg-white/20' }`}
+                  className={`w-[10px] h-[10px] rounded-full hover:bg-white/50 ${crew === curCrew ? 'bg-white' : 'bg-white/20' }`}
                   onClick={() => {
                     swiperRef.current.swiper.slideTo(index, 500)
                   }}></button>
