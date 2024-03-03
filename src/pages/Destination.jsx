@@ -42,7 +42,7 @@ const Destination = () => {
                 {dests.map((desti, index) => (
                   <button 
                     key={index} 
-                    className={`py-1 xl:py-2 mx-2 sub-heading-2 uppercase border-b-[3px] transition-all duration-200 ${destinations === desti ? 'text-accent border-white' : 'text-secondary border-transparent'}`} 
+                    className={`py-1 xl:py-2 mx-2 sub-heading-2 uppercase border-b-[3px] transition-all duration-200 hover:border-white/50 ${destinations === desti ? 'text-accent border-white' : 'text-secondary border-transparent'}`} 
                     id={`${desti}`} 
                     onClick={() => {
                       swiperRef.current.swiper.slideTo(index, 500)
